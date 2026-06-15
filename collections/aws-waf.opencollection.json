@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AWS WAFV2 API",
+    "version": "2019-07-29"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoke an AWS WAFV2 operation",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://wafv2.{region}.amazonaws.com/",
+        "headers": [
+          {
+            "name": "X-Amz-Target",
+            "value": ""
+          },
+          {
+            "name": "Content-Type",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        },
+        "auth": {
+          "type": "apikey",
+          "key": "Authorization",
+          "value": "{{Authorization}}",
+          "placement": "header"
+        }
+      },
+      "docs": "All AWS WAFV2 operations are dispatched as POSTs to the service root.\nSet the `X-Amz-Target` header to `AWSWAF_20190729.<OperationName>` (for example\n`AWSWAF_20190729.CreateWebACL`) and place the JSON parameters in the request body.\n"
+    }
+  ],
+  "bundled": true
+}
