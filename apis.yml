@@ -58,7 +58,7 @@ common:
   url: https://docs.aws.amazon.com/waf/
 - type: Pricing
   url: https://aws.amazon.com/waf/pricing/
-- type: SignUp
+- type: Signup
   url: https://portal.aws.amazon.com/billing/signup
 maintainers:
 - FN: Kin Lane
