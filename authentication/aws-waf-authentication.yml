@@ -1,0 +1,19 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/aws-waf-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: sigv4
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: |-
+    AWS Signature Version 4. The `Authorization` header carries the SigV4
+    signature derived from your access key and secret. See
+    https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html.
+  sources:
+  - openapi/aws-waf-openapi.yml

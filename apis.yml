@@ -52,6 +52,14 @@ apis:
   - url: graphql/aws-waf-graphql.md
     type: GraphQL
 common:
+- type: TrustCenter
+  url: security/aws-waf-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/aws-waf-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/aws-waf-domain-security.yml
+- type: Authentication
+  url: authentication/aws-waf-authentication.yml
 - type: Website
   url: https://aws.amazon.com/waf/
 - type: Documentation
@@ -60,6 +68,8 @@ common:
   url: https://aws.amazon.com/waf/pricing/
 - type: Signup
   url: https://portal.aws.amazon.com/billing/signup
+- url: https://aws.amazon.com/blogs/networking-and-content-delivery/feed/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
