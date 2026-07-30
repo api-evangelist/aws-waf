@@ -10,7 +10,19 @@ description: >-
   exploits. The AWS WAFV2 API and AWS SDKs provide programmatic access using
   AWS Signature Version 4 authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aws-waf.png
 tags:
 - Security
 - Web Application Firewall
@@ -28,11 +40,9 @@ apis:
 - aid: aws-waf:wafv2-api
   name: AWS WAFV2 API
   description: >-
-    REST API for creating and managing web ACLs, rule groups, IP sets,
-    regex pattern sets, and logging configurations across regional and
-    CloudFront-scoped AWS WAF deployments. Requests are authenticated with
-    AWS Signature Version 4 (SigV4) using AWS access keys or temporary IAM
-    credentials.
+    REST API for creating and managing web ACLs, rule groups, IP sets, regex pattern sets, and logging
+    configurations across regional and CloudFront-scoped AWS WAF deployments. Requests are authenticated
+    with AWS Signature Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
   humanURL: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
   baseURL: https://wafv2.us-east-1.amazonaws.com
   tags:
@@ -48,9 +58,18 @@ apis:
     url: https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html
   - type: Endpoints
     url: https://docs.aws.amazon.com/general/latest/gr/waf.html
-
   - url: graphql/aws-waf-graphql.md
     type: GraphQL
+- aid: aws-waf:aws-waf-aws-wafv2-api-api
+  name: AWS WAF AWS WAFV2 API API
+  description: The AWS WAFV2 API API from AWS WAF — 1 operation(s) for aws wafv2 api.
+  humanURL: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
+  baseURL: https://wafv2.us-east-1.amazonaws.com
+  tags:
+  - AWS WAFV2 API
+  properties:
+  - type: OpenAPI
+    url: openapi/aws-waf-aws-wafv2-api-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/aws-waf-agentic-access.yml
