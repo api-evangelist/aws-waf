@@ -1,0 +1,14 @@
+{
+  "provider": "aws-waf",
+  "sources": [
+    "aws-waf-aws-wafv2-api-api-openapi.yml"
+  ],
+  "outputs": [
+    "aws-waf-aws-wafv2-api-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

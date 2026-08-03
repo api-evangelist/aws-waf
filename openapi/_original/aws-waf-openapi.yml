@@ -1,0 +1,127 @@
+openapi: 3.1.0
+info:
+  title: AWS WAFV2 API
+  version: '2019-07-29'
+  description: |
+    AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS
+    requests forwarded to a protected resource (CloudFront distribution, API Gateway
+    REST API, Application Load Balancer, AWS AppSync GraphQL API, Cognito user pool,
+    App Runner service, Amplify application, or Verified Access instance).
+
+    The AWS WAFV2 API uses the AWS JSON 1.1 protocol over HTTPS. All requests are
+    POSTs to the service root with the operation name in the `X-Amz-Target` header
+    (`AWSWAF_20190729.<OperationName>`) and authenticated with AWS Signature Version 4.
+  contact:
+    name: AWS WAF
+    url: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
+  license:
+    name: Apache 2.0
+    url: https://aws.amazon.com/apache-2-0/
+servers:
+  - url: https://wafv2.{region}.amazonaws.com
+    description: Regional endpoint (use us-east-1 for CloudFront/Amplify scope)
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+tags:
+  - name: Web ACLs
+    description: Manage web access control lists
+  - name: Rule Groups
+    description: Manage reusable rule groups
+  - name: IP Sets
+    description: Manage IP address sets used in rules
+  - name: Regex Pattern Sets
+    description: Manage regex pattern sets used in rules
+  - name: Logging
+    description: Manage logging configurations
+  - name: Tags
+    description: Manage resource tags
+paths:
+  /:
+    post:
+      summary: Invoke an AWS WAFV2 operation
+      description: |
+        All AWS WAFV2 operations are dispatched as POSTs to the service root.
+        Set the `X-Amz-Target` header to `AWSWAF_20190729.<OperationName>` (for example
+        `AWSWAF_20190729.CreateWebACL`) and place the JSON parameters in the request body.
+      operationId: invokeWafv2
+      parameters:
+        - in: header
+          name: X-Amz-Target
+          required: true
+          schema:
+            type: string
+            enum:
+              - AWSWAF_20190729.CreateWebACL
+              - AWSWAF_20190729.GetWebACL
+              - AWSWAF_20190729.UpdateWebACL
+              - AWSWAF_20190729.DeleteWebACL
+              - AWSWAF_20190729.ListWebACLs
+              - AWSWAF_20190729.AssociateWebACL
+              - AWSWAF_20190729.DisassociateWebACL
+              - AWSWAF_20190729.GetWebACLForResource
+              - AWSWAF_20190729.ListResourcesForWebACL
+              - AWSWAF_20190729.CreateRuleGroup
+              - AWSWAF_20190729.GetRuleGroup
+              - AWSWAF_20190729.UpdateRuleGroup
+              - AWSWAF_20190729.DeleteRuleGroup
+              - AWSWAF_20190729.ListRuleGroups
+              - AWSWAF_20190729.CreateIPSet
+              - AWSWAF_20190729.GetIPSet
+              - AWSWAF_20190729.UpdateIPSet
+              - AWSWAF_20190729.DeleteIPSet
+              - AWSWAF_20190729.ListIPSets
+              - AWSWAF_20190729.CreateRegexPatternSet
+              - AWSWAF_20190729.GetRegexPatternSet
+              - AWSWAF_20190729.UpdateRegexPatternSet
+              - AWSWAF_20190729.DeleteRegexPatternSet
+              - AWSWAF_20190729.ListRegexPatternSets
+              - AWSWAF_20190729.PutLoggingConfiguration
+              - AWSWAF_20190729.GetLoggingConfiguration
+              - AWSWAF_20190729.DeleteLoggingConfiguration
+              - AWSWAF_20190729.ListLoggingConfigurations
+              - AWSWAF_20190729.GetSampledRequests
+              - AWSWAF_20190729.ListAvailableManagedRuleGroups
+              - AWSWAF_20190729.CheckCapacity
+              - AWSWAF_20190729.TagResource
+              - AWSWAF_20190729.UntagResource
+              - AWSWAF_20190729.ListTagsForResource
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            enum: [application/x-amz-json-1.1]
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              description: Operation-specific JSON payload.
+      responses:
+        '200':
+          description: Successful operation response (shape depends on the operation)
+          content:
+            application/x-amz-json-1.1:
+              schema:
+                type: object
+        '400':
+          description: Client error (WAFInvalidParameterException, WAFNonexistentItemException, etc.)
+        '403':
+          description: Access denied
+        '500':
+          description: WAF internal error
+      security:
+        - sigv4: []
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: |
+        AWS Signature Version 4. The `Authorization` header carries the SigV4
+        signature derived from your access key and secret. See
+        https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html.
