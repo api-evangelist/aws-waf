@@ -1,13 +1,10 @@
 aid: aws-waf
 name: AWS WAF
-description: >-
-  AWS WAF is a web application firewall that monitors and controls HTTP and
-  HTTPS requests forwarded to protected resources such as Amazon CloudFront
-  distributions, API Gateway REST APIs, Application Load Balancers, AWS
-  AppSync GraphQL APIs, Cognito user pools, App Runner services, Amplify
-  applications, and Verified Access instances. It enables rule-based blocking,
-  rate limiting, and managed rule groups to defend against common web
-  exploits. The AWS WAFV2 API and AWS SDKs provide programmatic access using
+description: AWS WAF is a web application firewall that monitors and controls HTTP and HTTPS requests
+  forwarded to protected resources such as Amazon CloudFront distributions, API Gateway REST APIs, Application
+  Load Balancers, AWS AppSync GraphQL APIs, Cognito user pools, App Runner services, Amplify applications,
+  and Verified Access instances. It enables rule-based blocking, rate limiting, and managed rule groups
+  to defend against common web exploits. The AWS WAFV2 API and AWS SDKs provide programmatic access using
   AWS Signature Version 4 authentication.
 type: Index
 deliveryModel:
@@ -44,18 +41,16 @@ tags:
 - Edge Security
 - Cloud
 - AWS
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/aws-waf/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/aws-waf/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: aws-waf:wafv2-api
   name: AWS WAFV2 API
-  description: >-
-    REST API for creating and managing web ACLs, rule groups, IP sets, regex pattern sets, and logging
-    configurations across regional and CloudFront-scoped AWS WAF deployments. Requests are authenticated
-    with AWS Signature Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
+  description: REST API for creating and managing web ACLs, rule groups, IP sets, regex pattern sets,
+    and logging configurations across regional and CloudFront-scoped AWS WAF deployments. Requests are
+    authenticated with AWS Signature Version 4 (SigV4) using AWS access keys or temporary IAM credentials.
   humanURL: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
   baseURL: https://wafv2.us-east-1.amazonaws.com
   tags:
@@ -74,7 +69,7 @@ apis:
   - url: graphql/aws-waf-graphql.md
     type: GraphQL
 - aid: aws-waf:aws-waf-aws-wafv2-api-api
-  name: AWS WAF AWS WAFV2 API API
+  name: AWS WAF AWS WAFV2 API
   description: The AWS WAFV2 API API from AWS WAF — 1 operation(s) for aws wafv2 api.
   humanURL: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
   baseURL: https://wafv2.us-east-1.amazonaws.com
