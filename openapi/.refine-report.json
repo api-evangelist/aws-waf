@@ -1,7 +1,7 @@
 {
   "provider": "aws-waf",
   "sources": [
-    "aws-waf-aws-wafv2-api-api-openapi.yml"
+    "_original/aws-waf-openapi.yml"
   ],
   "outputs": [
     "aws-waf-aws-wafv2-api-api-openapi.yml"
@@ -10,8 +10,13 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "aws-waf-aws-wafv2-api-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "aws-waf-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "aws-waf-openapi.yml: tagged paths POST / -> AWS WAFV2 API",
+    "aws-waf-openapi.yml: declared missing tag: AWS WAFV2 API",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "aws-waf-aws-wafv2-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

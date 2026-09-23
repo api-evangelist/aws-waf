@@ -8,16 +8,7 @@ info:
 
     REST API, Application Load Balancer, AWS AppSync GraphQL API, Cognito user pool,
 
-    App Runner service, Amplify application, or Verified Access instance).
-
-
-    The AWS WAFV2 API uses the AWS JSON 1.1 protocol over HTTPS. All requests are
-
-    POSTs to the service root with the operation name in the `X-Amz-Target` header
-
-    (`AWSWAF_20190729.<OperationName>`) and authenticated with AWS Signature Version 4.
-
-    '
+    App Runner service, Amplify application, or Verified Access instance).'
   contact:
     name: AWS WAF
     url: https://docs.aws.amazon.com/waf/latest/APIReference/Welcome.html
@@ -39,11 +30,9 @@ paths:
       summary: Invoke an AWS WAFV2 operation
       description: 'All AWS WAFV2 operations are dispatched as POSTs to the service root.
 
-        Set the `X-Amz-Target` header to `AWSWAF_20190729.<OperationName>` (for example
+        Set the `X-Amz-Target` header to `AWSWAF_20190729.` (for example
 
-        `AWSWAF_20190729.CreateWebACL`) and place the JSON parameters in the request body.
-
-        '
+        `AWSWAF_20190729.CreateWebACL`) and place the JSON parameters in the request body.'
       operationId: invokeWafv2
       parameters:
       - in: header
