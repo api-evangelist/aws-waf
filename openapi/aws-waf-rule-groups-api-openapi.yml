@@ -76,6 +76,19 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    VisibilityConfig:
+      type: object
+      properties:
+        SampledRequestsEnabled:
+          type: boolean
+        CloudWatchMetricsEnabled:
+          type: boolean
+        MetricName:
+          type: string
+      required:
+      - SampledRequestsEnabled
+      - CloudWatchMetricsEnabled
+      - MetricName
     Rule:
       type: object
       properties:
@@ -91,19 +104,6 @@ components:
       - Name
       - Priority
       - VisibilityConfig
-    VisibilityConfig:
-      type: object
-      properties:
-        SampledRequestsEnabled:
-          type: boolean
-        CloudWatchMetricsEnabled:
-          type: boolean
-        MetricName:
-          type: string
-      required:
-      - SampledRequestsEnabled
-      - CloudWatchMetricsEnabled
-      - MetricName
   securitySchemes:
     aws_sig_v4:
       type: apiKey

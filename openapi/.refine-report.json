@@ -1,32 +1,31 @@
 {
   "provider": "aws-waf",
   "sources": [
-    "_original/aws-waf-openapi.yml",
-    "amazon-waf-ip-sets-api-openapi.yml",
-    "amazon-waf-rule-groups-api-openapi.yml",
-    "amazon-waf-web-acls-api-openapi.yml"
+    "_original/amazon-waf-ip-sets-api-openapi.yml",
+    "_original/amazon-waf-rule-groups-api-openapi.yml",
+    "_original/amazon-waf-web-acls-api-openapi.yml",
+    "_original/aws-waf-openapi.yml"
   ],
   "outputs": [
-    "aws-waf-aws-wafv2-api-api-openapi.yml",
     "aws-waf-ip-sets-api-openapi.yml",
     "aws-waf-rule-groups-api-openapi.yml",
-    "aws-waf-web-acls-api-openapi.yml"
+    "aws-waf-web-acls-api-openapi.yml",
+    "aws-waf-aws-wafv2-api-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/amazon-waf-ip-sets-api-openapi.yml",
-    "archived openapi/amazon-waf-rule-groups-api-openapi.yml",
-    "archived openapi/amazon-waf-web-acls-api-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (4 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "aws-waf-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "aws-waf-openapi.yml: tagged paths POST / -> AWS WAFV2 API",
     "aws-waf-openapi.yml: declared missing tag: AWS WAFV2 API",
-    "apis.yml register: written (+3 apis, 5 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "aws-waf-aws-wafv2-api-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "aws-waf-aws-wafv2-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-waf-ip-sets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-waf-rule-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aws-waf-web-acls-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
