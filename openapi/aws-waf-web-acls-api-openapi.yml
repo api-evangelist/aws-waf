@@ -150,6 +150,17 @@ paths:
         dispatcher: FALLBACK
 components:
   schemas:
+    WebACLSummary:
+      type: object
+      properties:
+        Name:
+          type: string
+        Id:
+          type: string
+        ARN:
+          type: string
+        LockToken:
+          type: string
     VisibilityConfig:
       type: object
       properties:
@@ -163,17 +174,6 @@ components:
       - SampledRequestsEnabled
       - CloudWatchMetricsEnabled
       - MetricName
-    WebACLSummary:
-      type: object
-      properties:
-        Name:
-          type: string
-        Id:
-          type: string
-        ARN:
-          type: string
-        LockToken:
-          type: string
     Rule:
       type: object
       properties:
