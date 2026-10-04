@@ -192,6 +192,9 @@ apis:
   - type: Security
     url: https://docs.aws.amazon.com/waf/latest/developerguide/security.html
 common:
+- type: CapabilityMap
+  url: capabilities/aws-waf-capability-edges.yml
+  name: AWS WAF Business Capability Map
 - type: AgenticAccess
   url: agentic-access/aws-waf-agentic-access.yml
 - type: TrustCenter
